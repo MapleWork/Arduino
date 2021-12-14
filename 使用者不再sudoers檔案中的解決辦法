@@ -15,3 +15,15 @@
 [root@compile user]# visudo
 找到root ALL=(ALL) ALL
 在下面新增 (使用者) ALL=(ALL) ALL
+
+儲存退出，並恢復/etc/sudoers的訪問許可權為440
+
+[root@compile user]# chmod 440 /etc/sudoers
+
+[root@compile user]# ls -l /etc/sudoers
+
+-r--r-----. 1 root root 4030 9月  25 00:57 /etc/sudoers
+
+[root@compile user]#
+
+5、切換到普通使用者，測試使用者許可權提升功能
