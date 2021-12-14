@@ -1,0 +1,17 @@
+[user@compile ~]$ su root
+
+密碼：[root@compile user]#
+
+[root@compile user]# ls -l /etc/sudoers
+
+-r--r-----. 1 root root 4030 9月  25 00:57 /etc/sudoers
+
+[root@compile user]# chmod 777 /etc/sudoers
+
+[root@compile user]# ls -l /etc/sudoers
+
+-rwxrwxrwx. 1 root root 4030 9月  25 00:57 /etc/sudoers
+
+[root@compile user]# visudo
+找到root ALL=(ALL) ALL
+在下面新增 (使用者) ALL=(ALL) ALL
